@@ -13,6 +13,19 @@ from pyrogram.errors import ApiIdInvalid, BadRequest
 import config
 from handlers import register_handlers
 from session_bot import create_bot
+from flask import Flask
+import threading
+
+app = Flask(name)
+
+@app.route("/")
+def home():
+    return "Bot is alive!"
+
+def run():
+    app.run(host="0.0.0.0", port=8080)
+
+threading.Thread(target=run).start()
 
 logging.basicConfig(level=logging.INFO, format="[%(levelname)s] %(name)s: %(message)s")
 
