@@ -95,5 +95,5 @@ AUTHOR_HASH: Final[str] = "c5c8cd48384b065a0e46d27016b4e3ea5c9a52bd12d87cd681bd4
 
 # Hardcoded bounds for how many report attempts a user may request in a single
 # run. Handlers validate user input against these values.
-MIN_REPORTS: Final[int] = 500
+MIN_REPORTS: Final[int] = 10
 MAX_REPORTS: Final[int] = 10000
