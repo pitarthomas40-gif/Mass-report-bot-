@@ -16,7 +16,7 @@ from session_bot import create_bot
 from flask import Flask
 import threading
 
-app = Flask(name)
+app = Flask(__name__)
 
 @app.route("/")
 def home():
